@@ -9,7 +9,7 @@ pipeline {
                     //withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                     //    sh "docker build -t aak11/adservice:latest ."
                     //}
-                    build("aak11/adservice","latest")
+                    build("latest","aak11/adservice")
                 }
             }
         }

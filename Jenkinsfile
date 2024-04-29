@@ -1,3 +1,3 @@
 @Library('shared-library') _
 
-dockerUtils.buildAndPushDockerImage(imageName: 'aak11/adservice', imageTag: 'latest')
+dockerUtils.build(imageName: 'aak11/adservice', imageTag: 'latest')

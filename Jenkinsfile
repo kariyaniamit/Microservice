@@ -5,9 +5,11 @@ pipeline {
     stages {
         stage('Build & Tag Docker Image') {
             steps {
-                withDockerRegistry(credentialsId: 'docker_cred', toolName: 'docker') {
-                        sh "docker build -t aak11/adservice:latest ."
+                dir('src') {
+                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                        sh "docker build -t aak11/cartservice:latest ."
                     }
+                }
             }
         }
         

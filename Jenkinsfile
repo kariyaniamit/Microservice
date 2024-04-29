@@ -6,7 +6,7 @@ pipeline {
                 script{
                 dir('src') {
                     withDockerRegistry(credentialsId: 'docker_cred', toolName: 'docker') {
-                        sh "docker build -t aak11/cartservice:latest ."
+                        sh "docker build -t aak11/adservice:latest ."
                     }
                   }
                 }

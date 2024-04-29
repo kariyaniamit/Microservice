@@ -4,11 +4,9 @@ pipeline {
         stage('Build & Tag Docker Image') {
             steps {
                 script {
-                    dir('src') {
                     withDockerRegistry(credentialsId: 'docker_cred', toolName: 'docker') {
                         sh "docker build -t aak11/adservice:latest ."
                     }
-                        }
                 }
             }
         }

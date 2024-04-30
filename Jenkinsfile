@@ -2,7 +2,6 @@
 
 //dockerUtils.buildAndPushDockerImage('aak11/adservice','latest')
 
-
 pipeline {
         agent any
         stages {
